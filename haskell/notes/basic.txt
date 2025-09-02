@@ -1,0 +1,33 @@
+Types:
+    - name for a set of group of values 
+    - most of the time types of the values are not written down
+    - haskell will work out what the types are for you 
+    - you can write it down if you want however, 
+        5 :: Integer
+
+Main: 
+    - every program must define main in haskell
+
+Functional Programming: 
+    - relies on functions modeled on mathematical functions 
+    - combination of expressions 
+    - functional programming languages rae all based on the lambda calculus 
+    - haskell does not incorporate features into the language that arent translatable into lambda expressions
+    - haskell is a pure functional language 
+    valid 
+        f(1) = A 
+        f(2) = B 
+        f(3) = C 
+    not valid 
+        f(1) = X
+        f(1) = Y 
+        f(3) = Z
+    cant have same two inputs, same outputs are fine 
+
+Basic Structure 
+    λ x  . x 
+        - the first x is the single parameter of the function, 
+        this bindsany variables with the same name in the body of the function 
+        - the second x is the expression the lambda returns when applied. 
+        this is a bound variable 
+        - the dot separates the parameters of the lambda from the function body 
