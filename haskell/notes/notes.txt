@@ -1,0 +1,24 @@
+Mathematics:    Haskell
+    f(x)        f x 
+    f(x, y)     f x y
+    f(g(x))     f (g x)
+    f(x, g(y))  f x (g y)   f x (g (y)) -> Paranthesis group things. In this syntax f function will have only one parameter. 
+                                            Haskell will ask where is the second arguement?
+
+-- is a comment 
+
+Basic data types 
+Int: fixed-precision integer 
+Integer: Arbitrary-precision integer (no limit for precision)
+Float: single-precision floating-point number 
+Double: double-precision floating point number (11 points precision)
+Char: a single character (defined by single quotes)
+Bool: Boolean value (T or F)
+[Char]: String
+
+Data initialization 
+- in haskell, variables are final. even the methods do not modify variables 
+- if you need to modify variable, return a new one in the function 
+- for "floating values"(?) if you don't write a type, it will be by default Double 
+- indentation is important: after do blocks, at least 2 spaces is needed - no tabs!!
+

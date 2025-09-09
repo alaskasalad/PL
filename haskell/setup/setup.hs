@@ -1,9 +1,14 @@
-module Main where
+fFunc :: Int -> Int
+fFunc x = 2 * x 
 
-import Data.Char
-import Data.List
+add:: Int -> Int -> Int
+add x y = x + y
 
-run :: String -> 
+gFunc :: Int -> Int
+gFunc x = x + 5 
 
 main :: IO()
-main = putStrLn "hello, Haskell!"
+main = do
+    print(fFunc(gFunc(4))) -- 18
+    print(fFunc (gFunc 4)) -- 18
+    print( add 3 (fFunc 5)) -- 13 
