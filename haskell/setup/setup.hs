@@ -9,6 +9,6 @@ gFunc x = x + 5
 
 main :: IO()
 main = do
-    print(fFunc(gFunc(4))) -- 18
+    print(fFunc(gFunc(4))) -- 18 (complaining about a redundant bracket)
     print(fFunc (gFunc 4)) -- 18
     print( add 3 (fFunc 5)) -- 13 

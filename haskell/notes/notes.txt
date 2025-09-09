@@ -2,7 +2,8 @@ Mathematics:    Haskell
     f(x)        f x 
     f(x, y)     f x y
     f(g(x))     f (g x)
-    f(x, g(y))  f x (g y)   f x (g (y)) -> Paranthesis group things. In this syntax f function will have only one parameter. 
+    f(x, g(y))  f x (g y)   f x (g (y)) -> Paranthesis group things. 
+                                            In this syntax f function will have only one parameter. 
                                             Haskell will ask where is the second arguement?
 
 -- is a comment 
@@ -21,4 +22,53 @@ Data initialization
 - if you need to modify variable, return a new one in the function 
 - for "floating values"(?) if you don't write a type, it will be by default Double 
 - indentation is important: after do blocks, at least 2 spaces is needed - no tabs!!
+_______________________________________
+module Main (main) where -> optional 
+Import Data.Typeable 
+
+main :: IO()
+main = do
+  let x = 42 :: Int
+  let y = 45 :: Integer 
+  let f = 45.5
+  print(typeOf(f)) -> no type so this is a Double 
+  let mylist = [4,5,6]
+  print (mylist)
+_______________________________________
+
+Side Effects concept
+- a side effect occurs when a function or expression modifies some state outside its local environment or interacts with the outside world in some way 
+- examples: 
+    - changing a global variable 
+    - modifying a data structure
+    - writing to a file 
+    - performing any action that affects the execution context beyond just returning a value 
+
+Haskell Side Effects
+- tries to minimize the side effects as much as possible 
+- all variables are final/immutable 
+- modifying a global variable is tough
+- void function does not exist, if void it is IO()
+- random number generation has a side effect 
+- created as a type safe language 
+
+Pure Functions 
+- function that does not produce side effects 
+
+Printing
+- putStr does not leae a new line 
+- putStrLn puts the cursor to the next line, side effect: prints to the console 
+- string concatenation is done with ++ 
+- return() after main = do is optional 
+- putStr and putStrLn is only for strings 
+- to print something that is ot a string use print 
+- if you have a string in print you have to convert with show 
+_______________________________________
+main :: IO()
+main = do 
+  let myname = 3 :: Int 
+  putStrLn(show(mynum)) -> 3
+  print(mynum) -> 3 as Int 
+  print(show(mynum)) -> "3"
+_______________________________________
 
