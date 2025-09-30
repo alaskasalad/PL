@@ -72,3 +72,10 @@ main = do
   print(show(mynum)) -> "3"
 _______________________________________
 
+Function Names
+- functions names can't start with capital letters 
+- function names should start with lowercase or _ 
+- haskell does NOT like tabs. do not use tabs. use 2 or more spaces 
+- function names can have a single quote: 
+    don'tHateMe x = x * 3
+    
